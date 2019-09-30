@@ -8,6 +8,10 @@ body{
     padding: 0;
     margin: 0;
 }
+
+
+
+/* =========container form========= */
 .container__form{
     margin: 0 auto;
     background-color: aqua;
@@ -21,3 +25,10 @@ body{
 .form-titulo{
     
 }
+
+
+
+/* ===========container comentarios========== */
+
+/* adicionar uma class a uma div que ira ser linkada com o javascrip para fazer cada comentario */
+/* com propriedades ja de display flex */
