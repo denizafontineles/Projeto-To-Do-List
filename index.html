@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./CSS/style.css">
-    <title>Projeto To Do List</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700i&display=swap" rel="stylesheet">
+    <title>To Do List</title>
 </head>
 
 <body>
@@ -15,8 +16,7 @@
             <header class="form-titulo">
                     <h1> Adicione uma nova tarefa</h1>
             </header>
-
-            <section>
+            <section class="container__input">
                 <div class="form-input">
                     <input type="text" class="input" id="form-input" placeholder="digite sua tarefa">
                 </div>
@@ -26,13 +26,9 @@
                         ADD
                     </button>                    
                 </div>
-
-            </section>
-            
-
+            </section>           
             <section class="container-tarefas">
                 <div class="container-tarefas__list">
-
                 </div>
                 <div class="container__buttons" >
                     <button class="button__riscar-tarefas" type="button">
@@ -41,13 +37,10 @@
                     <button class="button__excluir-tarefas" type="button">
                         Excluir tarefas
                     </button>
-
                 </div>
             </section>
-
         </form>
     </div>
-
     <script src="./JS/script.js"></script>
 </body>
 
