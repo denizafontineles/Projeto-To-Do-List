@@ -1,9 +1,23 @@
  
 // 1 pegar o id do input
-const digitarTarefas = document.getElementById("form-input")
-const 
+const formulario = document.getElementById("container__form")
+const botaoAdiciona = document.getElementById("button-tarefas")
+
+// const tarefas = document.getElementById("container-tarefas__lista")
+
+formulario.addEventListener("submit", function(evento){
+    evento.preventDefault()
+    let digitarTarefas = document.getElementById("formulario-input")
+    let guardarValorTaf = digitarTarefas.value.trim()
+
+    botaoAdiciona.addEventListener("")
 
 
+    // let mensagem = document.createElement("p")
+    // tarefas.appendChild(mensagem)
+    // mensagem.textContent = mensagem
+
+})
 
 
 // 2 classe do botão ADD
