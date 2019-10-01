@@ -2,7 +2,7 @@
 
 *{
     box-sizing: border-box;
-    font-family: font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 body{
@@ -49,7 +49,7 @@ body{
 .form-titulo{
     display: flex;
     justify-content: center;
-    font-size: font-size: 15px;
+    font-size: 15px;
 
 }
 
@@ -133,10 +133,15 @@ h1{
 
 /* =============PSEUDOCLASSES-JS============= */
 
+.riscar__tarefa{
+text-decoration: line-through;
 
+}
 
+/* .lista__tarefa{
 
-/* ========container comentários======= */
+}
 
-/* adicionar uma class a uma div que ira ser linkada com o javascript para fazer cada comentario */
-/* com propriedades ja de display flex */
+.botao_x{
+
+} */
