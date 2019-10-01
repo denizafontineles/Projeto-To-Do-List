@@ -2,7 +2,7 @@
 // 1 pegar o id do input
 const formulario = document.getElementById("container__form")
 const botaoAdiciona = document.getElementById("button-tarefas")
-
+const boxTarefas = document.getElementById("container-tarefas__lista")
 // const tarefas = document.getElementById("container-tarefas__lista")
 
 formulario.addEventListener("submit", function(evento){
@@ -10,13 +10,18 @@ formulario.addEventListener("submit", function(evento){
     let digitarTarefas = document.getElementById("formulario-input")
     let guardarValorTaf = digitarTarefas.value.trim()
 
-    botaoAdiciona.addEventListener("")
+        let listarTarefas = document.createElement("div")
+        boxTarefas.appendChild(listarTarefas)
+        let mostrarTarefas = document.createElement("p")
+        listarTarefas.appendChild(mostrarTarefas)
+        let cancel = document.createElement("button")
+        cancel.textContent = "x"
+        listarTarefas.appendChild(cancel)
 
-
-    // let mensagem = document.createElement("p")
-    // tarefas.appendChild(mensagem)
-    // mensagem.textContent = mensagem
-
+        mostrarTarefas.textContent = guardarValorTaf
+        
+        formulario.reset ()
+    
 })
 
 
