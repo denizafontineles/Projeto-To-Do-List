@@ -35,7 +35,7 @@ body{
     margin: 0 auto;
     background-color:white;
     width: 85%;
-    height: 88%;
+    /* height: 88%; */
     display: flex;
     /* justify-content: space-between; */
     flex-direction: column;
@@ -91,7 +91,7 @@ h1{
 /* =======CONTAINER TAREFAS========= */
 .container-tarefas__list{
     border: 1px solid #ba7af8;
-    height: 50vh;
+    /* height: 50vh; */
     width: 100%;
     
 }    
@@ -121,7 +121,7 @@ h1{
         margin: 0 auto;
         background-color: white;
         width: 35%;
-        height: 88%;
+        /* height: 88%; */
         display: flex;
         
         flex-direction: column;
