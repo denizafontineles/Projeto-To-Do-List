@@ -24,7 +24,7 @@ formulario.addEventListener("submit", function (evento) {
         boxTarefas.appendChild(listarTarefas)
         
         let mostrarTarefas = document.createElement("p")
-        mostrarTarefas.setAttribute("class", "paragrafo")
+        mostrarTarefas.setAttribute("id", "paragrafo")
         listarTarefas.appendChild(mostrarTarefas)
         mostrarTarefas.textContent = guardarValorTaf
         digitarTarefas.getAttribute("placeholder")
