@@ -15,7 +15,9 @@ formulario.addEventListener("submit", function (evento) {
         digitarTarefas.setAttribute("placeholder", "Digite tarefa válida, senhora.")
         // digitarTarefas.classList.add("erro-vermelho")
 
-    } else {
+    } 
+    
+    else {
 
         digitarTarefas.setAttribute("placeholder", "Digite sua tarefa")
 
@@ -27,6 +29,8 @@ formulario.addEventListener("submit", function (evento) {
         listarTarefas.appendChild(mostrarTarefas)
         mostrarTarefas.textContent = guardarValorTaf
         digitarTarefas.getAttribute("placeholder")
+
+        
         
         let cancel = document.createElement("button")
         cancel.setAttribute("class", "botao_x")
