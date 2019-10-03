@@ -23,6 +23,7 @@ formulario.addEventListener("submit", function (evento) {
         boxTarefas.appendChild(listarTarefas)
         
         let mostrarTarefas = document.createElement("p")
+        mostrarTarefas.setAttribute("class", "paragrafo")
         listarTarefas.appendChild(mostrarTarefas)
         
         
@@ -30,7 +31,7 @@ formulario.addEventListener("submit", function (evento) {
         boxTarefas.setAttribute("draggable", "true")
         listarTarefas.setAttribute("draggable", "true")
         
-        let cancel = document.createElement("button")
+        let cancel = document.createElement("span")
         cancel.setAttribute("class", "botao_x")
         cancel.textContent = "x"
         listarTarefas.appendChild(cancel)
@@ -66,17 +67,17 @@ formulario.addEventListener("submit", function (evento) {
 
     }
     
-    boxTarefas.addEventListener("dragstart", function (ev) {
+    boxTarefas.addEventListener("dragstart", function(ev) {
         dragging = ev.target.closest(".lista__tarefa")
     })
     
     boxTarefas.addEventListener("dragover", function(ev){
         ev.preventDefault()
-        const node = ev.target.closest(".lista__tarefa")
-        this.insertBefore(dragging, node )
+        const posicao = ev.target.closest(".lista__tarefa")
+        this.insertBefore(dragging, posicao )
     })
     
-    boxTarefas.addEventListener("dragend", function (ev) { 
+    boxTarefas.addEventListener("dragend", function(ev) { 
 
         dragging = null     
     })

@@ -10,7 +10,7 @@ body{
     margin: 0;
     background-image: url("./img/pexels-photo-255379.jpeg");
     background-repeat: no-repeat;  
-
+    
 }
 
 .container__all{
@@ -22,8 +22,8 @@ body{
 }
 
 /* #e0c3fc,
- #8ec5fc,
-  #ba7af8 */
+#8ec5fc,
+#ba7af8 */
 
 
 
@@ -35,7 +35,7 @@ body{
     margin: 0 auto;
     background-color:white;
     width: 85%;
-    /* height: 88%; */
+    min-height: 88%; 
     display: flex;
     /* justify-content: space-between; */
     flex-direction: column;
@@ -50,8 +50,9 @@ body{
     display: flex;
     justify-content: center;
     font-size: 15px;
-
+    border-bottom: 2px solid #ba7af8;
 }
+
 
 
 /* =======CONTAINER INPUT========= */
@@ -80,6 +81,7 @@ h1{
 .input{
     width: 98%;
     height: 15vh;
+    border: none;
 }    
 
 .form-input{
@@ -91,7 +93,7 @@ h1{
 /* =======CONTAINER TAREFAS========= */
 .container-tarefas__list{
     border: 1px solid #ba7af8;
-    /* height: 50vh; */
+    min-height: 50vh; 
     width: 100%;
     
 }    
@@ -116,7 +118,33 @@ h1{
 
 
 
-@media (min-width: 720px){
+/* =============PSEUDOCLASSES-JS============= */
+
+.riscar__tarefa{
+text-decoration: line-through;
+
+}
+
+.paragrafo{
+    word-wrap: break-word;
+    min-height: 50px;
+}
+
+
+.lista__tarefa{
+
+    display: flex;
+        justify-content: space-between;
+        align-items: center;
+}
+
+
+
+
+/* ==============mediaquery================= */
+
+
+@media (min-width: 650px){
     .container__form {
         margin: 0 auto;
         background-color: white;
@@ -131,12 +159,6 @@ h1{
 
 
 
-/* =============PSEUDOCLASSES-JS============= */
-
-.riscar__tarefa{
-text-decoration: line-through;
-
-}
 
 /* .lista__tarefa{
 
