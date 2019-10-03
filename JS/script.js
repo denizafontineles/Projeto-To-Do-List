@@ -33,6 +33,10 @@ formulario.addEventListener("submit", function (evento) {
         listarTarefas.setAttribute("class", "lista__tarefa")
         mostrarTarefas.setAttribute("class", "paragrafo")
         cancel.setAttribute("class", "botao_x")
+        let mostrarTarefas = document.createElement("p")
+        mostrarTarefas.setAttribute("id", "paragrafo")
+        listarTarefas.appendChild(mostrarTarefas)
+        mostrarTarefas.textContent = guardarValorTaf
         digitarTarefas.getAttribute("placeholder")
         buttonEditar.setAttribute("class", "botao_editar")
        
