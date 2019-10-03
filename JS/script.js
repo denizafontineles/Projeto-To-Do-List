@@ -1,23 +1,24 @@
 
-// 1 pegar o id do input
-const formulario = document.getElementById("container__form")
+const formulario = document.getElementById("container__form") 
 const botaoAdiciona = document.getElementById("button-tarefas")
 const boxTarefas = document.getElementById("container-tarefas__lista")
 const buttonRiscarTarefa = document.getElementById("button__riscar-tarefa")
 const buttonExcluir = document.getElementById("button__excluir")
+let digitarTarefas = document.getElementById("formulario-input")
 let dragging
-
-// const tarefas = document.getElementById("container-tarefas__lista")
 
 formulario.addEventListener("submit", function (evento) {
     evento.preventDefault()
-    let digitarTarefas = document.getElementById("formulario-input")
     let guardarValorTaf = digitarTarefas.value.trim()
     
     if (guardarValorTaf === "") {
         digitarTarefas.setAttribute("placeholder", "Digite tarefa válida, senhora.")
-        
+        // digitarTarefas.classList.add("erro-vermelho")
+
     } else {
+
+        digitarTarefas.setAttribute("placeholder", "Digite sua tarefa")
+
         let listarTarefas = document.createElement("div")
         listarTarefas.setAttribute("class", "lista__tarefa")
         boxTarefas.appendChild(listarTarefas)
@@ -25,19 +26,13 @@ formulario.addEventListener("submit", function (evento) {
         let mostrarTarefas = document.createElement("p")
         mostrarTarefas.setAttribute("class", "paragrafo")
         listarTarefas.appendChild(mostrarTarefas)
-        
-        
-        mostrarTarefas.setAttribute("draggable", "true")
-        boxTarefas.setAttribute("draggable", "true")
-        listarTarefas.setAttribute("draggable", "true")
+        mostrarTarefas.textContent = guardarValorTaf
+        digitarTarefas.getAttribute("placeholder")
         
         let cancel = document.createElement("span")
         cancel.setAttribute("class", "botao_x")
         cancel.textContent = "x"
         listarTarefas.appendChild(cancel)
-
-        mostrarTarefas.textContent = guardarValorTaf
-        digitarTarefas.getAttribute("placeholder")
         
         mostrarTarefas.addEventListener("click", function (evento) {
             if (mostrarTarefas.classList.contains("riscar__tarefa")) {
@@ -47,11 +42,11 @@ formulario.addEventListener("submit", function (evento) {
                 mostrarTarefas.setAttribute("class", "riscar__tarefa")
             }
         })
-
+        
         cancel.addEventListener("click", function (evento) {
             listarTarefas.remove()
         })
-
+        
         buttonRiscarTarefa.addEventListener("click", function (evento) {
             if (mostrarTarefas) {
                 mostrarTarefas.classList.add("riscar__tarefa")
@@ -63,8 +58,9 @@ formulario.addEventListener("submit", function (evento) {
             
         })
         
-        
-
+        mostrarTarefas.setAttribute("draggable", "true")
+        boxTarefas.setAttribute("draggable", "true")
+        listarTarefas.setAttribute("draggable", "true")
     }
     
     boxTarefas.addEventListener("dragstart", function(ev) {
@@ -77,11 +73,12 @@ formulario.addEventListener("submit", function (evento) {
         this.insertBefore(dragging, posicao )
     })
     
-    boxTarefas.addEventListener("dragend", function(ev) { 
-
+    boxTarefas.addEventListener("dragend", function (ev) { 
+        
         dragging = null     
     })
     
     formulario.reset()
 })
+
 
