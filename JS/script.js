@@ -91,7 +91,7 @@ formulario.addEventListener("submit", function (evento) {
             })
         })
 
-        // ============== DRAG DROP ============
+        // ============== DRxAG DROP ============
         
         mostrarTarefas.setAttribute("draggable", "true")
         boxTarefas.setAttribute("draggable", "true")
