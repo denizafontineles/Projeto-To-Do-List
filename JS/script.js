@@ -5,6 +5,7 @@ const boxTarefas = document.getElementById("container-tarefas__lista")
 const buttonRiscarTarefa = document.getElementById("button__riscar-tarefa")
 const buttonExcluir = document.getElementById("button__excluir")
 let digitarTarefas = document.getElementById("formulario-input")
+let buttonSelecionados = document.getElementById("button__selecionados")
 let dragging
 
 formulario.addEventListener("submit", function (evento) {
@@ -18,25 +19,46 @@ formulario.addEventListener("submit", function (evento) {
     } 
     
     else {
-
-        digitarTarefas.setAttribute("placeholder", "Digite sua tarefa")
-
         let listarTarefas = document.createElement("div")
-        listarTarefas.setAttribute("class", "lista__tarefa")
-        boxTarefas.appendChild(listarTarefas)
-        
         let mostrarTarefas = document.createElement("p")
-        mostrarTarefas.setAttribute("class", "paragrafo")
-        listarTarefas.appendChild(mostrarTarefas)
-        mostrarTarefas.textContent = guardarValorTaf
-        digitarTarefas.getAttribute("placeholder")
-
-        
-        
         let cancel = document.createElement("span")
-        cancel.setAttribute("class", "botao_x")
-        cancel.textContent = "x"
+        digitarTarefas.setAttribute("placeholder", "Digite sua tarefa")
+        let buttonEditar = document.createElement("span")
+        
+        boxTarefas.appendChild(listarTarefas)
+        listarTarefas.appendChild(mostrarTarefas)
+        listarTarefas.appendChild(buttonEditar)
         listarTarefas.appendChild(cancel)
+        
+        listarTarefas.setAttribute("class", "lista__tarefa")
+        mostrarTarefas.setAttribute("class", "paragrafo")
+        cancel.setAttribute("class", "botao_x")
+        digitarTarefas.getAttribute("placeholder")
+        buttonEditar.setAttribute("class", "botao_editar")
+       
+        mostrarTarefas.textContent = guardarValorTaf
+        
+        cancel.textContent = "x"
+        buttonEditar.textContent = "Editar"
+
+        //         let inputEditar = document.createElement("input")
+        //         buttonEditar.appendChild(inputEditar)
+        //         inputEditar.setAttribute("type", "text")
+        //         inputEditar.setAttribute("class", "input_editar")
+        //         mostrarTarefas.remove()
+        // })
+        
+        listarTarefas.addEventListener("dblclick", function(evento){
+            listarTarefas.classList.remove("riscar_tarefa")
+            listarTarefas.setAttribute("contentEditable", true)
+        })
+        
+        
+        
+        
+        
+        
+        
         
         mostrarTarefas.addEventListener("click", function (evento) {
             if (mostrarTarefas.classList.contains("riscar__tarefa")) {
@@ -60,7 +82,12 @@ formulario.addEventListener("submit", function (evento) {
         buttonExcluir.addEventListener("click", function () {
             listarTarefas.remove()
             
+            buttonSelecionados.addEventListener("click", function(evento){
+                
+            })
         })
+
+        // ============== DRAG DROP ============
         
         mostrarTarefas.setAttribute("draggable", "true")
         boxTarefas.setAttribute("draggable", "true")

@@ -127,7 +127,7 @@ text-decoration: line-through;
 
 .paragrafo{
     word-wrap: break-word;
-    min-height: 50px;
+    min-height:[] 50px;
 }
 
 
@@ -157,17 +157,9 @@ text-decoration: line-through;
         border-radius: 5%;
 }
 
-
-
-
-/* .lista__tarefa{
-
+/* .button__editar{
+    color: rebeccapurple;
 }
-
-.botao_x{
-
-} */
-
-/* .erro-vermelho{
-    color: red
+.input_editar{
+    color: red;
 } */
