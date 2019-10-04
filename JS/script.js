@@ -23,8 +23,8 @@ formulario.addEventListener("submit", function (evento) {
         
         let listarTarefas = document.createElement("div")
         let mostrarTarefas = document.createElement("p")
-        let cancel = document.createElement("span")
-        let buttonEditar = document.createElement("span")
+        let cancel = document.createElement("button")
+        let buttonEditar = document.createElement("button")
         let valorEtiqueta = document.createElement("p")
         let pegaValorEtiqueta = etiqueta.value
         

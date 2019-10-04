@@ -21,8 +21,10 @@
                     <input type="text" class="input" id="formulario-input" placeholder="Digite sua tarefa">
                 </div>
                 <div class="container__opcao">
-                        <label for="opcao">Qual tipo de tarefa?</label>
+                        <label for="opcao"></label>
                         <select name="opcao" id="etiqueta">
+                            <option value="">tipo de tarefa</option>
+
                             <option value="Trabalho">Trabalho</option>
                             
                             <option value="Lazer">Lazer</option>
@@ -31,7 +33,8 @@
                             
                             <option value="Contas">Contas</option>
                             
-                            <option value="Moradia">Moradia</option>                    
+                            <option value="Moradia">Moradia</option>   
+                    </div>
                        </select>                  
 
                 <div class="container__button">
@@ -47,13 +50,14 @@
 
                 <div class="container__buttons" >
                     <button class="button__riscar-tarefas" id="button__riscar-tarefa" type="button">
-                        Selecionar 
+                        Marcar como Finalizadas
                     </button>
                     <button class="button__excluir-selecionados" id="button__selecionados" type="button">
-                        Excluir Selecionados
+                        Excluir Finalizadas
                     </button>
                     <button class="button__excluir-tarefas" id="button__excluir" type="button">
-                        Excluir 
+                        Excluir <br>
+                        Tudo 
                     </button>
                 </div>
             </section>
