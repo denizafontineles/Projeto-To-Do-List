@@ -22,6 +22,6 @@ Fase 5 -
   Permitir drag and drop pra reorganizar a lista.
 
 Fase 6 - BÔNUS
-  Editar tarefa
-  Adicionar etiqueta à tarefa
+  Editar tarefa;
+  Adicionar etiqueta à tarefa;
   Botão "Remover Completos" (quando clicado, ele remove).
